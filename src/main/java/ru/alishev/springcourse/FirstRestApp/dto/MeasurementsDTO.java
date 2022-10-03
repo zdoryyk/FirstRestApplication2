@@ -17,7 +17,7 @@ public class MeasurementsDTO {
     @Column(name = "raining")
     private Boolean raining;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name = "id",referencedColumnName = "sensor_id")
     private Sensor sensor;
 

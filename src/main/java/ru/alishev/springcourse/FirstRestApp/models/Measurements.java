@@ -20,8 +20,8 @@ public class Measurements {
     @Column(name = "raining")
     private Boolean raining;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "name",referencedColumnName = "name")
+    @ManyToOne()
+    @JoinColumn(name = "sensor_id",referencedColumnName = "id")
     private Sensor sensor;
 
 
@@ -33,11 +33,6 @@ public class Measurements {
         this.sensor = sensor;
     }
 
-    public Measurements(Float value, Boolean raining, Sensor sensor) {
-        this.value = value;
-        this.raining = raining;
-        this.sensor = sensor;
-    }
 
     public Measurements() {
     }
